@@ -1,32 +1,36 @@
+import portfolio from "@/images/portfolio.png";
+import dragon from "@/images/dragon_news.png";
+import keen from "@/images/keen.png";
+
 export const projects = [
   {
     id: "01",
-    title: "Travel Guide",
+    title: "Portfolio",
     description:
-      "A modern tourism platform that helps users discover tourist destinations across Bangladesh. Built with a responsive UI and dynamic backend integration.",
-    image: "/projects/travel-guide.png",
-    tech: ["Next.js", "React", "Node.js", "MySQL", "Tailwind CSS"],
-    github: "#",
+      "A modern developer portfolio built using Next.js and Tailwind CSS with responsive design and smooth UI interactions.",
+    image: portfolio,
+    tech: ["Next.js", "React", "Tailwind CSS", "Web3form"],
+    github: "https://github.com/tafsin90/portfolio-ElitWeb",
     live: "#",
   },
   {
     id: "02",
-    title: "TapTrack",
+    title: "Dragon News",
     description:
-      "An RFID-based Smart Attendance System using ESP32 and the MERN stack. The system records attendance in real time and provides an intuitive dashboard.",
-    image: "/projects/taptrack.png",
-    tech: ["React", "Express", "MongoDB", "ESP32"],
-    github: "#",
-    live: "#",
+      "Dragoon News is a responsive front-end web application built with modern technologies to deliver real-time news articles across multiple categories. The app provides a clean and engaging reading experience, complete with user authentication, category navigation, and detailed article views.",
+    image: dragon,
+    tech: ["NextJS", "Express", "MongoDB", "Better-Auth", "Tailwind CSS"],
+    github: "https://github.com/tafsin90/dragon-news",
+    live: "https://dragon-news-five-beryl.vercel.app",
   },
   {
     id: "03",
-    title: "Portfolio Website",
+    title: "Keen Keepers",
     description:
-      "A modern developer portfolio built using Next.js and Tailwind CSS with responsive design and smooth UI interactions.",
-    image: "/projects/portfolio.png",
-    tech: ["Next.js", "Tailwind CSS"],
-    github: "#",
-    live: "#",
+      "A personal relationship tracker built with Next.js that help me keep important friends and contacts organized, visible, and easy to follow up with.",
+    image: keen,
+    tech: ["Next.js", "Tailwind CSS","Recharts", "Daisy UI"],
+    github: "https://github.com/tafsin90/keen-keepers",
+    live: "https://keen-keepers-3jii.vercel.app/",
   },
 ];

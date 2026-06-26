@@ -1,29 +1,37 @@
+import { projects } from "@/utils/projectsData";
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "@/utils/projectsData";
 
 const ProjectsPage = () => {
   return (
-    <section className="w-11/12 max-w-7xl mx-auto py-20 space-y-36">
-      <div className="text-center space-y-3 mb-20">
+    <section className="max-w-10/12 mx-auto py-10 ">
+      <div className="text-center space-y-3">
         <h1 className="text-5xl font-bold">Projects</h1>
-        <p className="text-gray-400 max-w-2xl mx-auto">
+        <p className="text-gray-400 max-w-3xl mx-auto ">
           A collection of projects I've built while learning full-stack
-          development, cybersecurity, and embedded systems.
+          development. Check my{" "}
+          <Link
+            href={"https://github.com/tafsin90"}
+            target="_blank"
+            className="text-blue-500 font-bold underline hover:cursor-pointer"
+          >
+            Github
+          </Link>{" "}
+          to see all.
         </p>
       </div>
 
       {projects.map((project, index) => (
         <div
           key={project.id}
-          className={`grid lg:grid-cols-2 gap-14 items-center ${
+          className={`grid lg:grid-cols-2 gap-14 items-center border-b border-gray-300 py-20 ${
             index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
           }`}
         >
           {/* Image */}
 
-          <div className="relative group">
-            <div className="absolute -top-10 -left-4 text-8xl font-black text-gray-800/20 select-none">
+          <div>
+            <div className=" text-8xl font-black text-gray-500">
               {project.id}
             </div>
 
@@ -33,35 +41,32 @@ const ProjectsPage = () => {
                 width={1200}
                 height={700}
                 alt={project.title}
-                className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                className="object-cover transition duration-500 hover:scale-105"
               />
             </div>
           </div>
 
           {/* Content */}
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             <h2 className="text-4xl font-bold">{project.title}</h2>
 
-            <p className="text-gray-400 leading-8">{project.description}</p>
+            <p className="text-gray-600 leading-8">{project.description}</p>
 
             <div className="flex flex-wrap gap-3">
               {project.tech.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 rounded-full bg-base-200 text-sm"
-                >
+                <div key={tech} className="badge badge-soft badge-info text-black px-3 py-3">
                   {tech}
-                </span>
+                </div>
               ))}
             </div>
 
             <div className="flex gap-4 pt-3">
-              <Link href={project.live} className="btn btn-primary">
+              <Link href={project.live} target="_blank" className="btn btn-primary">
                 Live Demo
               </Link>
 
-              <Link href={project.github} className="btn btn-outline">
+              <Link href={project.github} target="_blank" className="btn btn-outline">
                 GitHub
               </Link>
             </div>

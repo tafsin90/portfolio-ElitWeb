@@ -14,10 +14,10 @@ const Navbar = () => {
           <Link href={"/skills"}>Skills</Link>
         </li>
         <li className="font-semibold">
-          <Link href={"/contact"}>Contact</Link>
+          <Link href={"/projects"}>Projects</Link>
         </li>
         <li className="font-semibold">
-          <Link href={"/projects"}>Projects</Link>
+          <Link href={"/contact"}>Contact</Link>
         </li>
       </>
     );
