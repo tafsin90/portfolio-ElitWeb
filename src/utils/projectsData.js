@@ -11,7 +11,7 @@ export const projects = [
     image: portfolio,
     tech: ["Next.js", "React", "Tailwind CSS", "Web3form"],
     github: "https://github.com/tafsin90/portfolio-ElitWeb",
-    live: "#",
+    live: "https://portfolio-elit-web.vercel.app/",
   },
   {
     id: "02",
@@ -29,7 +29,7 @@ export const projects = [
     description:
       "A personal relationship tracker built with Next.js that help me keep important friends and contacts organized, visible, and easy to follow up with.",
     image: keen,
-    tech: ["Next.js", "Tailwind CSS","Recharts", "Daisy UI"],
+    tech: ["Next.js", "Tailwind CSS", "Recharts", "Daisy UI"],
     github: "https://github.com/tafsin90/keen-keepers",
     live: "https://keen-keepers-3jii.vercel.app/",
   },
